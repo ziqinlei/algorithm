@@ -171,7 +171,7 @@ public class Tree_002_SerializeAndReconstructTree {
         Node head = null;
         printTree(head);
 
-        String pre = serialByPre2(head);
+        String pre = serialByPre(head);
         System.out.println("serialize tree by pre-order: " + pre);
         head = reconByPreString(pre);
         System.out.print("reconstruct tree by pre-order, ");
@@ -209,7 +209,7 @@ public class Tree_002_SerializeAndReconstructTree {
         head.right.right = new Node(5);
         printTree(head);
 
-        pre = serialByPre2(head);
+        pre = serialByPre(head);
         System.out.println("serialize tree by pre-order: " + pre);
         head = reconByPreString(pre);
         System.out.print("reconstruct tree by pre-order, ");
@@ -231,7 +231,7 @@ public class Tree_002_SerializeAndReconstructTree {
         head.right.right = new Node(666);
         printTree(head);
 
-        pre = serialByPre2(head);
+        pre = serialByPre(head);
         System.out.println("serialize tree by pre-order: " + pre);
         head = reconByPreString(pre);
         System.out.print("reconstruct tree by pre-order, ");
