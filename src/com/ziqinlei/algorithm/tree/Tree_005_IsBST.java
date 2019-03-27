@@ -23,7 +23,7 @@ public class Tree_005_IsBST {
 
     public static boolean isBST(Node node) {
         if (node == null) {
-            return true;
+            return false;
         }
         Stack<Node> stack = new Stack<>();
         int preValue = Integer.MIN_VALUE;
