@@ -3,7 +3,7 @@ package com.ziqinlei.algorithm.tree;
 import java.util.Stack;
 
 /**
- * 判断一棵树是否是搜索二叉树
+ * 判断一棵树是否是搜索二叉树（Binary Search Tree）
  * <p>
  * 思路：
  * 中序遍历，判断是否为递增数组。
