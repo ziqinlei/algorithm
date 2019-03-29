@@ -8,11 +8,11 @@ package com.ziqinlei.algorithm.linkedlist;
  * @since 2019-03-28
  */
 public class LinkedList_001_ReverseLinkedList {
-    public static class Node {
+    public static class ListNode {
         int val;
-        Node next;
+        ListNode next;
 
-        public Node(int val) {
+        public ListNode(int val) {
             this.val = val;
         }
     }
@@ -23,9 +23,9 @@ public class LinkedList_001_ReverseLinkedList {
      * @param head 头节点
      * @return 反转后头节点
      */
-    public static Node reverseSingleLinkedList(Node head) {
-        Node pre = null;
-        Node next;
+    public static ListNode reverseSingleLinkedList(ListNode head) {
+        ListNode pre = null;
+        ListNode next;
         while (head != null) {
             next = head.next;
             head.next = pre;
@@ -35,7 +35,7 @@ public class LinkedList_001_ReverseLinkedList {
         return pre;
     }
 
-    private static void printSingleLinkedList(Node head) {
+    private static void printSingleLinkedList(ListNode head) {
         System.out.print("single linked list: ");
         while (head != null) {
             System.out.print(head.val + " ");
@@ -85,11 +85,11 @@ public class LinkedList_001_ReverseLinkedList {
     }
 
     public static void main(String[] args) {
-        Node head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(4);
-        head.next.next.next.next = new Node(5);
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
         printSingleLinkedList(head);
         printSingleLinkedList(reverseSingleLinkedList(head));
 
