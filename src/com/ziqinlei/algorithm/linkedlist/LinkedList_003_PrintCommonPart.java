@@ -8,16 +8,16 @@ package com.ziqinlei.algorithm.linkedlist;
  * @since 2019/3/29
  */
 public class LinkedList_003_PrintCommonPart {
-    public static class Node {
+    public static class ListNode {
         int val;
-        Node next;
+        ListNode next;
 
-        public Node(int val) {
+        public ListNode(int val) {
             this.val = val;
         }
     }
 
-    public static void printCommonPart(Node head1, Node head2) {
+    public static void printCommonPart(ListNode head1, ListNode head2) {
         System.out.print("Common part: ");
         while (head1 != null && head2 != null) {
             if (head1.val < head2.val) {
@@ -33,29 +33,29 @@ public class LinkedList_003_PrintCommonPart {
         System.out.println();
     }
 
-    private static void printLinkedList(Node node) {
+    private static void printLinkedList(ListNode listNode) {
         System.out.print("Linked List: ");
-        while (node != null) {
-            System.out.print(node.val + " ");
-            node = node.next;
+        while (listNode != null) {
+            System.out.print(listNode.val + " ");
+            listNode = listNode.next;
         }
         System.out.println();
     }
 
     public static void main(String[] args) {
-        Node node1 = new Node(2);
-        node1.next = new Node(3);
-        node1.next.next = new Node(5);
-        node1.next.next.next = new Node(6);
+        ListNode listNode1 = new ListNode(2);
+        listNode1.next = new ListNode(3);
+        listNode1.next.next = new ListNode(5);
+        listNode1.next.next.next = new ListNode(6);
 
-        Node node2 = new Node(1);
-        node2.next = new Node(2);
-        node2.next.next = new Node(5);
-        node2.next.next.next = new Node(7);
-        node2.next.next.next.next = new Node(8);
+        ListNode listNode2 = new ListNode(1);
+        listNode2.next = new ListNode(2);
+        listNode2.next.next = new ListNode(5);
+        listNode2.next.next.next = new ListNode(7);
+        listNode2.next.next.next.next = new ListNode(8);
 
-        printLinkedList(node1);
-        printLinkedList(node2);
-        printCommonPart(node1, node2);
+        printLinkedList(listNode1);
+        printLinkedList(listNode2);
+        printCommonPart(listNode1, listNode2);
     }
 }
