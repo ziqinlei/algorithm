@@ -17,7 +17,7 @@ import java.util.Stack;
  * @since 2019/3/29
  */
 public class LinkedList_005_PalindromeLinkedList {
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
