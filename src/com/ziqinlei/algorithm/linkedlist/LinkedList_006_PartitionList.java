@@ -12,7 +12,7 @@ package com.ziqinlei.algorithm.linkedlist;
  * @since 2019/3/30
  */
 public class LinkedList_006_PartitionList {
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
