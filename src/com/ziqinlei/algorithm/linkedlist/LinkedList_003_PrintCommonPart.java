@@ -8,7 +8,7 @@ package com.ziqinlei.algorithm.linkedlist;
  * @since 2019/3/29
  */
 public class LinkedList_003_PrintCommonPart {
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
