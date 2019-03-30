@@ -11,7 +11,7 @@ package com.ziqinlei.algorithm.linkedlist;
  * @since 2019-03-28
  */
 public class LinkedList_002_SwapPairs {
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
