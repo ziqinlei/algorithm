@@ -14,7 +14,7 @@ package com.ziqinlei.algorithm.tree;
  * @since 2019/3/27
  */
 public class Tree_007_CBTNodeNumber {
-    public static class Node {
+    private static class Node {
         int value;
         Node left;
         Node right;

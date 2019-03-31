@@ -12,7 +12,7 @@ package com.ziqinlei.algorithm.tree;
  * @since 2019/3/26
  */
 public class Tree_004_IsBalancedTree {
-    public static class Node {
+    private static class Node {
         int value;
         Node left;
         Node right;

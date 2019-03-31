@@ -11,7 +11,7 @@ package com.ziqinlei.algorithm.tree;
  * @since 2019/3/25
  */
 public class Tree_001_SuccessorNode {
-    public static class Node {
+    private static class Node {
         int value;
         Node left;
         Node right;

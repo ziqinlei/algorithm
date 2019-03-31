@@ -11,7 +11,7 @@ import java.util.Stack;
  * @since 2019/3/27
  */
 public class Tree_005_IsBST {
-    public static class Node {
+    private static class Node {
         int value;
         Node left;
         Node right;

@@ -19,7 +19,7 @@ import java.util.Queue;
  * @since 2019-03-27
  */
 public class Tree_006_IsCBT {
-    public static class Node {
+    private static class Node {
         int value;
         Node left;
         Node right;
