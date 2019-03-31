@@ -10,6 +10,12 @@ import java.util.*;
  * @since 2019/3/31
  */
 public class Graph_003_TopologySort {
+    /**
+     * 拓扑排序算法
+     *
+     * @param graph 图
+     * @return 节点列表
+     */
     public static List<Node> topologySort(Graph graph) {
         Map<Node, Integer> inMap = new HashMap<>();
         Queue<Node> zeroInQueue = new ArrayDeque<>();
