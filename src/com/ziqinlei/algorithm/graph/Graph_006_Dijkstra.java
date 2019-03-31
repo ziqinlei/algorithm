@@ -15,12 +15,12 @@ import java.util.Set;
  */
 public class Graph_006_Dijkstra {
     /**
-     * Dijkstra算法
+     * Dijkstra算法1
      *
      * @param head 源节点
      * @return
      */
-    public static Map<Node, Integer> dijkstra(Node head) {
+    public static Map<Node, Integer> dijkstra1(Node head) {
         Map<Node, Integer> distanceMap = new HashMap<>();
         distanceMap.put(head, 0);
         Set<Node> selectedNodes = new HashSet<>();
@@ -55,7 +55,7 @@ public class Graph_006_Dijkstra {
         return minNode;
     }
 
-    public static class NodeRecord {
+    private static class NodeRecord {
         public Node node;
         public int distance;
 
@@ -65,7 +65,7 @@ public class Graph_006_Dijkstra {
         }
     }
 
-    public static class NodeHeap {
+    private static class NodeHeap {
         private Node[] nodes;
         private HashMap<Node, Integer> heapIndexMap;
         private HashMap<Node, Integer> distanceMap;
@@ -144,10 +144,10 @@ public class Graph_006_Dijkstra {
         }
     }
 
-    public static HashMap<Node, Integer> dijkstra2(Node head, int size) {
+    public static Map<Node, Integer> dijkstra2(Node head, int size) {
         NodeHeap nodeHeap = new NodeHeap(size);
         nodeHeap.addOrUpdateOrIgnore(head, 0);
-        HashMap<Node, Integer> result = new HashMap<>();
+        Map<Node, Integer> result = new HashMap<>();
         while (!nodeHeap.isEmpty()) {
             NodeRecord record = nodeHeap.pop();
             Node cur = record.node;
