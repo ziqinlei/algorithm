@@ -25,23 +25,19 @@ public class String_002_ValidPalindrome {
         if (s.isEmpty()) {
             return true;
         }
-        int left = 0;
-        int right = s.length() - 1;
-        char cLeft;
-        char cRight;
-        while (left < right) {
-            cLeft = s.charAt(left);
-            cRight = s.charAt(right);
-            if (!Character.isLetterOrDigit(cLeft)) {
-                left++;
-            } else if (!Character.isLetterOrDigit(cRight)) {
-                right--;
+        int lo = 0;
+        int hi = s.length() - 1;
+        while (lo < hi) {
+            if (!Character.isLetterOrDigit(s.charAt(lo))) {
+                lo++;
+            } else if (!Character.isLetterOrDigit(s.charAt(hi))) {
+                hi--;
             } else {
-                if (Character.toLowerCase(cLeft) != Character.toLowerCase(cRight)) {
+                if (Character.toLowerCase(s.charAt(lo)) != Character.toLowerCase(s.charAt(hi))) {
                     return false;
                 }
-                left++;
-                right--;
+                lo++;
+                hi--;
             }
         }
         return true;
