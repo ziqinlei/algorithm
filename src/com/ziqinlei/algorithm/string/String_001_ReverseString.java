@@ -40,9 +40,23 @@ public class String_001_ReverseString {
         return new StringBuilder(s).reverse().toString();
     }
 
+    /**
+     * 方式三：递归子串拼接
+     *
+     * @param s 字符串
+     * @return 反转后的字符串
+     */
+    public static String reverseString3(String s) {
+        if (s == null || s.length() < 2) {
+            return s;
+        }
+        return reverseString3(s.substring(1)) + s.charAt(0);
+    }
+
     public static void main(String[] args) {
         String s = "hello world";
         System.out.println(reverseString1(s));
         System.out.println(reverseString2(s));
+        System.out.println(reverseString3(s));
     }
 }
