@@ -10,7 +10,7 @@ public class Sort_003_Insertion {
     public static void sort(int[] a) {
         int n = a.length;
         for (int i = 1; i < n; i++) {
-            for (int j = i; j > 0 && a[j] > a[j - 1]; j--) {
+            for (int j = i; j > 0 && a[j] < a[j - 1]; j--) {
                 swap(a, j, j - 1);
             }
         }
