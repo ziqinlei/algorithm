@@ -11,18 +11,18 @@ public class BinarySearch {
     /**
      * 二分查找
      *
-     * @param a   有序数组
-     * @param key 目标元素
+     * @param a      有序数组
+     * @param target 目标元素
      * @return 目标元素所在坐标
      */
-    public static int binarySearch(int[] a, int key) {
+    public static int binarySearch(int[] a, int target) {
         int lo = 0;
         int hi = a.length - 1;
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
-            if (a[mid] < key) {
+            if (a[mid] < target) {
                 lo = mid + 1;
-            } else if (a[mid] > key) {
+            } else if (a[mid] > target) {
                 hi = mid - 1;
             } else {
                 return mid;
